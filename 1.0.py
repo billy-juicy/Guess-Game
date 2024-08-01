@@ -1,14 +1,15 @@
 from random import randint
 
 def play_game():
-    number = randint(1, 100) # Мы генерируем число от 1 до 100
+    n = int(input("Добавьте правую границу значений: "))
+    number = randint(1, n) # Мы генерируем число от 1 до n
     print("Добро пожаловать в числовую угадайку")
     cnt = 0 # Количество попыток отгадывания
 
     # Функция корректности введенных данных
     def is_invalid(arg):
         if arg.isdigit(): # Если значение состоит только из чисел, то прододолжаем работу кода
-            if 1 <= int(arg) <= 100:
+            if 1 <= int(arg) <= n:
                 return True
             else:
                 return False
@@ -17,7 +18,7 @@ def play_game():
 
     # Основной цикл
     while True:
-        arg = input("Введите число от 1 до 100: ")
+        arg = input("Введите число от 1 до " + str(n) + ": ")
         if is_invalid(arg):
             guess = int(arg) # Преобразуем к целому числу
             if guess < number:
