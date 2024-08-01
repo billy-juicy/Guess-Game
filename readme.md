@@ -16,16 +16,9 @@ To install the project, follow these steps:
     cd "Guess Game"
     ```
 
-3. Install dependencies:
-    ```
-    pip install -r requirements.txt
-    ```
-
 ## Usage
 
-To run the project, execute the following command:
-
-python master.py
+To run the project, open the 2.0 file.
 
 ## Contributing
 
